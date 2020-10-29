@@ -1,5 +1,7 @@
 package exercises
 
+import scala.annotation.tailrec
+
 object FunctionsExe extends App {
   /*
 1. A greeting function (name, age)
@@ -37,6 +39,7 @@ object FunctionsExe extends App {
 
   //4.
   def isPrime(n: Int): Boolean = {
+    @tailrec
     def isPrimeUntil(t: Int): Boolean =
       if (t <= 1) true
       else n % t != 0 && isPrimeUntil(t-1)
